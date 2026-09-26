@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathML Editor</title>
+    <style>
+        textarea {
+            width: 350px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="mathml-editor"></textarea>
+    <p id="result"></p>
+    <script>
+        var mathmlEditor = document.getElementById("mathml-editor");
+        var result = document.getElementById("result");
+        function updateMath() {
+            result.innerHTML = mathmlEditor.value;
+        }
+        mathmlEditor.oninput = updateMath;
+    </script>
+</body>
+</html>
